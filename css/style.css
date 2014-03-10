@@ -32,7 +32,7 @@ figcaption {
 }
 /* ID selector*/
 #logo {
-	background-color: aqua;
+	
 }
 /* Descendent selector*/
 #logo h1{
@@ -54,8 +54,80 @@ figcaption {
 #details a:active {
 	color: red;
 }
+/*/////////MEDIA////////*/
+img, video, audio {
+	max-width: 100%;
+}
 
 
+/*/////////LAYOUT////////*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wrapper {
+	width: 960px;
+	margin: 0 auto;	
+}
+.col-1 {
+	float: left;
+	width: 32%;
+	background-color: #ccc;
+} /* takes 1/3 of the 960px*/
+.col-2 {
+	float: left;
+	width: 66%;
+	background-color: #ccc;
+}/*takes 2/3 of the whole width 960px*/
+.col-3 {
+background-color: #ccc;
+}/*takes the whole width*/
+
+.clearfix:after {
+	content:".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+[Class*="col-"] {
+	margin-left: 2%;
+}/*selects any element with class="col-"*/
+
+.first {
+	margin-left: 0%;
+}/*the first column will not have left margin*/
+
+/*/////////SECTIONS////////*/
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 1;
+}
+
+section {
+	padding: 20px;
+}/*causes layout jumping*/
+
+/*/////////Social////////*/
+#social {
+	position: fixed;
+	top: 200px;
+	right: 20px;
+	width: 40px;
+	z-index: 1;
+}
+#social a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: yellow;
+}
 
 
 
